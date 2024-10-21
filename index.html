@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <h1 style="color: rgb(0, 0, 0); font-size: 24px ;text-align: center;">Selamat Datang di Halaman Beranda</h1>
+            <div style="font-family: Source Code Pro ;color: #0b8400; margin: 0; background: #011f24; padding: 40px 5px; 
+    float: left; width: 21%; font-size: 1.5em; text-align: center;"><img src="C:\Users\PC LAB SI 32\Downloads\kasirr2.png" height="150px"></img></div>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beranda</title>
+    <link rel="stylesheet" href="bstyle.css">
+</head>
+<body>
+    <button onclick="Pesan()">Buka buku tamu</button>
+ <h2> Tabel Pesanan </h2>
+    <table id="tabelPesanan" border="1">
+        <thead>
+            <tr>
+                <th>Nama</th>
+                <th>Email</th>
+                <th>Pesanan</th>
+            </tr>
+        </thead>
+    </table>
+ 
+    <script>
+        function Pesan() {
+            var nama = prompt("Masukkan Nama Anda:");
+            var email = prompt("Masukkan Email Anda:");
+            var pesan = prompt("Masukkan Pesan Anda:");
+ 
+            var table = document.getElementById("tabelPesanan");
+            var newRow = table.insertRow();
+ 
+            var cell1 = newRow.insertCell(0);
+            var cell2 = newRow.insertCell(1);
+            var cell3 = newRow.insertCell(2);
+ 
+            cell1.textContent = nama;
+            cell2.textContent = email;
+            cell3.textContent = pesan;
+        }
+    </script>
+    </br>
+    <a href="about.html">Tentang Kami</a>
+</body>
+</html>
